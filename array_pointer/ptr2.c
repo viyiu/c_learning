@@ -12,16 +12,21 @@ int main(void)
 
 void max_return(const double arr[])
 {
-    double tmp;
+    double tmp,min;
     double a;
     
     tmp = arr[0];
+    min = arr[0];
     for (int i = 0; i < 5; i++) {
         if (tmp < arr[i]) {
             tmp = arr[i];
-            printf("%8.2f\n", tmp);
+            //printf("%8.2f\n", tmp);
+        }
+
+        if (min > arr[i]) {
+            min = arr[i];
         }
     }
 
-    printf("%f\n", tmp);
+    printf("max - min = %5.2f\n", tmp - min);
 }
